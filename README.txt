@@ -29,11 +29,11 @@
     c) The "UserInterface" displays an admittedly primitive user interface for dealing cards,
        and comparing the resulting hands.
 	  
- 8) To run the HandEvaluator tests, just "java PokerHands.TestEvaluator".
+ 8) To run the HandEvaluator tests, just "java PokerHand.TestEvaluator".
     This prints out the test descriptions as they run, and then (SHOULD) say
 	"ALL TEST PASSED!" when it's done.
 
- 9) To run the UserInterface, just "java PokerHands.UserInterface".
+ 9) To run the UserInterface, just "java PokerHand.UserInterface".
 
 10) In the UserInterface:
     a) Click on a card from the deck to deal it into the next available slot. Once you have

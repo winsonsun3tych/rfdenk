@@ -289,8 +289,7 @@ public class HandEvaluator {
 		// The two pairs will appear as XXYY_, XX_YY, or _XXYY.
 		private boolean checkTwoPairs(Card[] hand) {
 			for(int s1 = 0; s1 < 2; s1++) {
-				if(hand[s1].number == hand[s1+1].number)
-				{
+				if(hand[s1].number == hand[s1+1].number) {
 					for(int s2 = s1+2; s2 < 4; s2++) {
 						if(hand[s2].number == hand[s2+1].number)
 						{
@@ -460,6 +459,8 @@ public class HandEvaluator {
 		new ValidHand("QH,QC,7D,  7S,7H", HandEvaluator.Value.FULL_HOUSE, 7),
 		new ValidHand("QH,5D,QC,5S,5H", HandEvaluator.Value.FULL_HOUSE, 5),
 		new ValidHand("AH,3H, 2H, 4H,5H", HandEvaluator.Value.FLUSH, calculateKicker(14, 5, 4, 3, 2)),
+		new ValidHand("JH,8C,10D,9S,7H", HandEvaluator.Value.STRAIGHT, 11),
+		new ValidHand("10H,6C,9D,7S,8H", HandEvaluator.Value.STRAIGHT, 10),
 		// TOAK form _XXX_
 		new ValidHand("10H,10S,10C,AH,4C", HandEvaluator.Value.THREE_OF_A_KIND, 10),
 		// TOAK form XXX__
