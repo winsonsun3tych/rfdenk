@@ -22,6 +22,8 @@ import java.awt.Font;
 
 public class UserInterface {
 	
+	private String[] playerNames = {"Player1", "Player2"};
+	
 	private static final String fontFamily = "Arial";
 	private static final Color handBg = new Color(208,208,255);
 	private static final Color winColor = Color.green;
@@ -61,7 +63,7 @@ public class UserInterface {
 		// ...disable the "Compare" button...
 		compareButton.setEnabled(false);
 		// ...and clear the result.
-		resultText.setText(" \n \n ");
+		resultText.setText(" \n \n \n ");
 	}
 	
 	// Compare the two hands, and show who wins!
@@ -85,9 +87,9 @@ public class UserInterface {
 			if(v1.compareTo(v2) > 0) {
 				topHand.setBackground(winColor);
 				topHand.setOpaque(true);
-				System.out.println("HAND1 WINS!");
+				System.out.println(playerNames[0] + " WINS!");
 				System.out.println(v1.description + " beats " + v2.description);
-				resultText.setText(v1.description + "\n  beats\n" + v2.description);
+				resultText.setText(playerNames[0] + " wins!\n" + v1.description + "\n  beats\n" + v2.description);
 			}
 			else if(v1.compareTo(v2) == 0) {
 				System.out.println("TIE!");
@@ -96,9 +98,9 @@ public class UserInterface {
 			else {
 				bottomHand.setBackground(winColor);
 				bottomHand.setOpaque(true);
-				System.out.println("HAND2 WINS!");
+				System.out.println(playerNames[1] + " WINS!");
 				System.out.println(v2.description + " beats " + v1.description);
-				resultText.setText(v2.description + "\n  beats\n" + v1.description);
+				resultText.setText(playerNames[1] + " wins!\n" + v2.description + "\n  beats\n" + v1.description);
 			}
 			
 			compareButton.setEnabled(false);
@@ -285,7 +287,7 @@ public class UserInterface {
 		// Below the buttons, a field to tell you who wins!
 		resultText = new JTextPane();
 		resultText.setFont(new Font(fontFamily, Font.BOLD, 16));
-		resultText.setText(" \n ");
+		resultText.setText(" \n \n \n ");
 		resultText.setEditable(false);
 		GridBagConstraints resultConstraints = new GridBagConstraints();
 		resultConstraints.gridx = 0;
