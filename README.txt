@@ -42,6 +42,7 @@
 	   wins. The winning hand will be highlighted in green, and the reason for the win will
 	   appear at the bottom of the frame. (If the hands tie, it will tell you so).
 	c) To restart, click the "Reset" button to start over.
+	d) You can edit the player names "in situ".
 	   
 11) Noted TODOs:
     a) The HandEvaluator does not check for duplicate cards. The user interface prevents this
@@ -49,4 +50,5 @@
 	b) The rules of the project allow for "ties" in some cases. I think that the real rules
 	   of poker fall back to the suit, but I did not include that (but I did "leave room" for
 	   it).
-	c) The UI also needs a test harness...
+	c) The UI also needs a test harness.
+	d) There should be some processing on the player names, to keep them from being too long.

@@ -22,7 +22,8 @@ import java.awt.Font;
 
 public class UserInterface {
 	
-	private String[] playerNames = {"Player1", "Player2"};
+	JTextArea topPlayer;
+	JTextArea bottomPlayer;
 	
 	private static final String fontFamily = "Arial";
 	private static final Color handBg = new Color(208,208,255);
@@ -87,20 +88,20 @@ public class UserInterface {
 			if(v1.compareTo(v2) > 0) {
 				topHand.setBackground(winColor);
 				topHand.setOpaque(true);
-				System.out.println(playerNames[0] + " WINS!");
+				System.out.println(topPlayer.getText() + " WINS!");
 				System.out.println(v1.description + " beats " + v2.description);
-				resultText.setText(playerNames[0] + " wins!\n" + v1.description + "\n  beats\n" + v2.description);
+				resultText.setText(topPlayer.getText() + " wins!\n" + v1.description + "\n  beats\n" + v2.description);
 			}
 			else if(v1.compareTo(v2) == 0) {
 				System.out.println("TIE!");
-				resultText.setText(v1.description + "\n ties\n" + v2.description);
+				resultText.setText("No winner!\n" + v1.description + "\n ties\n" + v2.description);
 			}
 			else {
 				bottomHand.setBackground(winColor);
 				bottomHand.setOpaque(true);
-				System.out.println(playerNames[1] + " WINS!");
+				System.out.println(bottomPlayer.getText() + " WINS!");
 				System.out.println(v2.description + " beats " + v1.description);
-				resultText.setText(playerNames[1] + " wins!\n" + v2.description + "\n  beats\n" + v1.description);
+				resultText.setText(bottomPlayer.getText() + " wins!\n" + v2.description + "\n  beats\n" + v1.description);
 			}
 			
 			compareButton.setEnabled(false);
@@ -200,8 +201,13 @@ public class UserInterface {
 		constraintsTopHand.fill = GridBagConstraints.HORIZONTAL;
 		
 		topHand = new JPanel();
-		topHand.setLayout(new GridLayout(5,1));
+		topHand.setLayout(new GridLayout(6,1));
 		topHand.setBackground(new Color(128,128,255));
+		
+		topPlayer = new JTextArea("Player1", 1, 1);
+		topPlayer.setFont(new Font(fontFamily, Font.BOLD, 14));
+		topHand.add(topPlayer);
+		
 		for(int n = 0; n < 5; n++) {
 			cardTexts[n] = new JTextPane();
 			cardTexts[n].setOpaque(false);
@@ -212,6 +218,7 @@ public class UserInterface {
 		}
 		handsPanel.add(topHand, constraintsTopHand);
 
+		
 		
 		
 		GridBagConstraints constraintsBottomHand = new GridBagConstraints();
@@ -226,8 +233,13 @@ public class UserInterface {
 
 		
 		bottomHand = new JPanel();
-		bottomHand.setLayout(new GridLayout(5,1));
+		bottomHand.setLayout(new GridLayout(6,1));
 		bottomHand.setBackground(new Color(128,128,255));
+		
+		bottomPlayer = new JTextArea("Player2", 1, 1);
+		bottomPlayer.setFont(new Font(fontFamily, Font.BOLD, 14));
+		bottomHand.add(bottomPlayer);
+		
 		for(int n = 0; n < 5; n++) {
 			cardTexts[n+5] = new JTextPane();	// JTextArea("", 1, 1);
 			cardTexts[n+5].setOpaque(false);
