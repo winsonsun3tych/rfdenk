@@ -20,7 +20,7 @@
  7) Code structure:
     a) The "HandEvaluator" takes a string describing a hand, formatted like "KC,4D,KD,JS,10H",
        and returns a HandEvaluator.Value object that can be compared to other instances.
-    b) The "TestEvaluator" runs the test harness within HandEvalutor.
+    b) The "TestEvaluator" runs the test harness within HandEvaluator.
          i) It ensures that an InvalidHandException is thrown for invalid hands 
 	        (bad cards, too many cards, too few cards).
         ii) It checks that the HandEvaluator.Value instances are correct regarding hand type
@@ -42,7 +42,8 @@
 	   wins. The winning hand will be highlighted in green, and the reason for the win will
 	   appear at the bottom of the frame. (If the hands tie, it will tell you so).
 	c) To restart, click the "Reset" button to start over.
-	d) You can edit the player names "in situ".
+	d) You can edit the player names "in situ", and those values will appear in the "result"
+	   pane at the bottom when you hit "Compare".
 	   
 11) Noted TODOs:
     a) The HandEvaluator does not check for duplicate cards. The user interface prevents this
@@ -52,3 +53,11 @@
 	   it).
 	c) The UI also needs a test harness.
 	d) There should be some processing on the player names, to keep them from being too long.
+	
+12) Expected extensions:
+    a) More players.
+	b) Texas hold-em: find best five cards out of seven, with some number of common cards.
+	c) Shuffle and deal, to generate random hands.
+	
+	
+	
