@@ -56,8 +56,8 @@
 	
 12) Expected extensions:
     a) More players.
-	b) Texas hold-em: find best five cards out of seven, with some number of common cards.
-	c) Shuffle and deal, to generate random hands.
+    b) Texas hold-em: find best five cards out of seven, with some number of common cards.
+    c) Shuffle and deal, to generate random hands.
 	
 	
 	
