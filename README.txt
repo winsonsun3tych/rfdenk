@@ -1,4 +1,6 @@
-
+ 0) This project is the "Poker Hands" domain, using Java for Interface,
+    Platform and Language.
+ 
  1) Please please please don't ding me on the UI. All of my prior
     UI work in java has been for Android devices (and that UI 
     looks nice). I decided to learn Swing for this project, so
