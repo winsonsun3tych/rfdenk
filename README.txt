@@ -48,8 +48,8 @@
 11) Noted TODOs:
     a) The HandEvaluator does not check for duplicate cards. The user interface prevents this
        situation, but we still need to check.
-	b) The rules of the project allow for "ties" in some cases. I think that the real rules
-	   of poker fall back to the suit, but I did not include that (but I did "leave room" for
+    b) The rules of the project allow for "ties" in some cases. I think that the real rules
+       of poker fall back to the suit, but I did not include that (but I did "leave room" for
        it).
     c) The UI also needs a test harness.
     d) There should be some processing on the player names, to keep them from being too long.
